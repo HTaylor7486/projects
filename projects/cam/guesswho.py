@@ -1,12 +1,12 @@
-import picamera,time
-def getpic(name="null"):
-    try:
-        with picamera.PiCamera() as camera:
-            q = "n"
-            while q == "n":
-                camera.start_preview()
-                time.sleep(3)
-                camera.capture("{0}.jpeg".format (name))
+import picamera,time#imports moduals
+def getpic(name="null"):#defines function
+    try:#trys to run code block
+        with picamera.PiCamera() as camera:#runs code block with the pi cam
+            q = "n"#sets q to n
+            while q == "n":#starts loop 
+                camera.start_preview()#starts cam preview
+                time.sleep(3)#pauses the program
+                camera.capture("{0}.jpeg".format (name))#takes a pic with and sets 
                 camera.stop_preview()
                 q = input("is the image okay? (y/n) ")
                 filename = ("{0}.jepg".format (name))
