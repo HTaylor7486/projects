@@ -1,8 +1,8 @@
-import picamera,time
-name = input('please enter your name')
-with picamera.PiCamera() as camera:
-    camera.resolution = (1024,768)
-    camera.start_preview()
+import picamera,time#iports moduals
+name = input('please enter your name')#sets name to user input
+with picamera.PiCamera() as camera:#sets picam modual to camera
+    camera.resolution = (1024,768)#sets resolution
+    camera.start_preview()#starts preview
 
-    time.sleep(2)
-    camera.capture( name +'.jpeg')
+    time.sleep(2)#pauses the program
+    camera.capture( name +'.jpeg')#captures picture
