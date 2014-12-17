@@ -16,25 +16,25 @@ def getpic(name="null"):#defines function
         print("Your camera is not working please connect and restart the program")#prints message
 
 def getchar():#defines function
-    name = ""#sets name to nothing
-    while name == "":  checks to see#checks if name is = to nothing
+    name = "h"#sets name to nothing
+    while name == "":  #checks to see#checks if name is = to nothing
         name = input("what is your name?")#prints message
-    hair = ""#sets hair to nothing
+    hair = "blonde"#sets hair to nothing
     while not hair in ["blonde","brown","ginger","no hair"]:#checks to see if hair is =  to something on a list
         hair = input ("what hair colour do you have? (blonde/brown/ginger/no hair)")#sets hair to user input
-    hat = ""#sets hat to nothing
+    hat = "y"#sets hat to nothing
     while not hat in ["y","n"]:#checks to see if hat is =  to something on a list
         hat = input("do you have a hat? (y/n)")#sets hat to user input
-    eye = ""#sets eye to nothing
+    eye = "green"#sets eye to nothing
     while not eye in ["green","brown","blue"] :#checks to see if eye is =  to something on a list
         eye = input("what is your eye colour")#sets eye to user input
-    gender = ""#sets gender to nothing
+    gender = "m"#sets gender to nothing
     while not gender in ["m","f"] :#checks to see if gender is =  to something on a list
         gender = input("what is your gender?(m/f)")#sets gender to user input
-    fhair = ""#sets fhair to nothing
+    fhair = "n"#sets fhair to nothing
     while not fhair in ["y","n"]:#checks to see if fahir is =  to something on a list
         fhair = input("do you have facial hair?(y/n)")#sets fhair to user input
-    glass = ""#sets glass to nothing
+    glass = "y"#sets glass to nothing
     while not glass in ["y","n"]:#checks to see if glass is =  to something on a list
         glass = input("do you have glasses?(y/n)")#sets glass to user input
     charprof = [name,hair,hat,eye,gender,fhair,glass]#sets charprof to list of all chars 
@@ -56,7 +56,6 @@ def load():
         charprof = []
     print(charprof)
     return charprof
-
 
 charprof = load()
 save(charprof)
