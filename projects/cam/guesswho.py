@@ -15,53 +15,6 @@ def getpic(name="null"):#defines function
     except picamera.exc.PicameraMMALError:#if code block gives this error run block beneath
         print("Your camera is not working please connect and restart the program")#prints message
 
-<<<<<<< HEAD
-def getchar():
-    name = "h"
-    while name == "":  
-        name = input("what is your name?")
-    hair = "blonde"
-    while not hair in ["blonde","brown","ginger","no hair"]:
-        hair = input ("what hair colour do you have? (blonde/brown/ginger/no hair)")
-    hat = "y"
-    while not hat in ["y","n"]:
-        hat = input("do you have a hat? (y/n)")
-    eye = "green"
-    while not eye in ["green","brown","blue"] :
-        eye = input("what is your eye colour")
-    gender = "m"
-    while not gender in ["m","f"] :
-        gender = input("what is your gender?(m/f)")
-    fhair = "y"
-    while not fhair in ["y","n"]:
-        fhair = input("do you have facial hair?(y/n)")
-    glass = "y"
-    while not glass in ["y","n"]:
-        glass = input("do you have glasses?(y/n)")
-    charprof = [name,hair,hat,eye,gender,fhair,glass]
-    getpic(name)
-    return charprof
-        
-def save(x):
-    prof = getchar()
-    x.append(prof)
-    with open("profiles.txt",mode = "w") as my_file:
-        json.dump(charprof,my_file)
-        
-def load():
-    try:
-        with open("profiles.txt",mode = "r") as my_file:
-            charprof = json.load(my_file)
-    except IOError:
-        print("No profiles found, making new")
-        charprof = []
-    print(charprof)
-    return charprof
-
-
-charprof = load()
-save(charprof)
-=======
 def getchar():#defines function
     name = ""#sets name to nothing
     while name == "":  checks to see#checks if name is = to nothing
@@ -88,9 +41,22 @@ def getchar():#defines function
     getpic(name)#runs getpic wit name
     return charprof
         
-def save():#defines function save
-    charprof = getchar()#sets charprof to result of getchar
-    with open("profiles.txt",mode = "w") as my_file:#opens profiles in write mode
-        json.dump(charprof,my_file)#saves charprof
-save()#runs save
->>>>>>> fc43b43dd39bfb39efd892fd86e1dcea8841d92d
+def save(x):
+    prof = getchar()
+    x.append(prof)
+    with open("profiles.txt",mode = "w") as my_file:
+        json.dump(charprof,my_file)
+        
+def load():
+    try:
+        with open("profiles.txt",mode = "r") as my_file:
+            charprof = json.load(my_file)
+    except IOError:
+        print("No profiles found, making new")
+        charprof = []
+    print(charprof)
+    return charprof
+
+
+charprof = load()
+save(charprof)
